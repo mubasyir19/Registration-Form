@@ -1,0 +1,40 @@
+<table id="example1" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>NPM</th>
+      <th>Kelas</th>
+      <th>Jurusan</th>
+      <th>Region</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for( let i = 0; i < candidate.length; i++ ) { %>
+    <tr>
+      <td><%= i + 1 %></td>
+      <td><%= candidate[i].nama %></td>
+      <td><%= candidate[i].npm %></td>
+      <td><%= candidate[i].kelas %></td>
+      <td><%= candidate[i].jurusan %></td>
+      <td><%= candidate[i].region %></td>
+      <td>
+        <a href="/admin/candidate/detail/<%= candidate[i]._id %>" class="btn btn-info btn-sm">
+          <i class="fas fa-eye"></i>
+          Detail
+        </a>
+        <a
+          href="javascript:void()"
+          type="button"
+          class="btn btn-danger btn-sm button-delete"
+          data-id="<%= candidate[i]._id %>"
+        >
+          <i class="fas fa-trash-alt"></i>
+          Hapus
+        </a>
+      </td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>

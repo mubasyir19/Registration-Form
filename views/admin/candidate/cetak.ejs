@@ -1,0 +1,24 @@
+<table id="example1" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>NPM</th>
+      <th>Kelas</th>
+      <th>Jurusan</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for( let i = 0; i < candidate.length; i++ ) { %>
+    <tr>
+      <td><%= i + 1 %></td>
+      <td><%= candidate[i].nama %></td>
+      <td><%= candidate[i].npm %></td>
+      <td><%= candidate[i].kelas %></td>
+      <td><%= candidate[i].jurusan %></td>
+      <td><%= candidate[i].region %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>

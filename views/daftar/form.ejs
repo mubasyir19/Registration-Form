@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/images/gundar.png" type="image/icon type" />
+    <title>Form Pendaftaran Calon Programmer | Lab Psikologi Gunadarma</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css" />
+  </head>
+  <body>
+    <div class="col-md-5 mx-auto mt-4">
+      <!-- general form elements -->
+      <div class="d-flex">
+        <img src="/images/gundar.png" width="auto" height="100" alt="" />
+        <h2 class="ml-3 mb-4">Penerimaan Programmer Laboratorium Psikologi Gunadarma PTA 2023/2024</h2>
+      </div>
+      <!-- Message -->
+      <%- include("../partials/message.ejs") %>
+      <!-- End of Message -->
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Silakan Isi Form di bawah ini !</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form action="/registrasi" method="post" enctype="multipart/form-data">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <!-- <span class="ml-3 text-red font-italic">*wajib diisi</span> -->
+              <!-- <div class="d-flex justify-content-between">
+              </div> -->
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan Nama Lengkap"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="npm">NPM</label>
+              <input type="text" class="form-control" id="npm" name="npm" placeholder="Masukkan NPM" required />
+            </div>
+            <div class="form-group">
+              <label for="kelas">Kelas</label>
+              <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukkan Kelas" required />
+            </div>
+            <div class="form-group">
+              <label>Jurusan</label>
+              <select class="form-control select2" style="width: 100%" name="jurusan" required>
+                <option selected="selected" disabled>Pilih Jurusan</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Sistem Komputer">Sistem Komputer</option>
+                <option value="Informatika">Informatika</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Region</label>
+              <select class="form-control select2" style="width: 100%" name="region" required>
+                <option selected="selected">Pilih Region</option>
+                <option value="Depok">Depok</option>
+                <option value="Kalimalang">Kalimalang</option>
+                <option value="Cengkareng">Cengkareng</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="photo">Upload Photo</label>
+              <span class="ml-3 text-dark font-italic">(Format: Foto_Nama)</span>
+              <input type="file" class="form-control" id="photo" name="photo" required />
+              <br />
+              <img id="preview" alt="" />
+            </div>
+            <div class="form-group">
+              <label for="cv">Upload CV</label>
+              <span class="ml-3 text-dark font-italic">(Format: CV-Nama)</span>
+              <input type="file" class="form-control" name="cv" id="cv-file" accept=".pdf" required />
+              <!-- <br />
+              <div id="pdf-preview"></div> -->
+            </div>
+            <div class="form-group">
+              <label for="krs">Upload KRS</label>
+              <span class="ml-3 text-dark font-italic">(Format: KRS Semester ..._Nama)</span>
+              <input type="file" class="form-control" name="krs" id="krs-file" accept=".pdf" required />
+            </div>
+            <div class="form-group">
+              <label for="ktp">Upload KTP</label>
+              <span class="ml-3 text-dark font-italic">(Format: KTP Nama)</span>
+              <input type="file" class="form-control" name="ktp" id="ktp-file" accept=".pdf" required />
+            </div>
+            <div class="form-group">
+              <label for="ktm">Upload KTM</label>
+              <span class="ml-3 text-dark font-italic">(Format: KTM Nama)</span>
+              <input type="file" class="form-control" name="ktm" id="ktm-file" accept=".pdf" required />
+            </div>
+            <div class="form-group">
+              <label for="nilai">Upload Rangkuman Nilai</label>
+              <span class="ml-3 text-dark font-italic">(Format: RangkumanNilai_Nama)</span>
+              <input type="file" class="form-control" name="nilai" id="nilai-file" accept=".pdf" required />
+            </div>
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.card -->
+    </div>
+
+    <footer class="text-center">
+      <strong
+        >Form ini dibuat oleh
+        <a href="https://mahdy-mubasyir.vercel.app/" target="_blank" rel="noopener noreferrer">Mahdy Mubasyir</a
+        >.</strong
+      >
+      All rights reserved.
+      <h3 class="my-3 fw-bold text-secondary">Laboratorium Psikologi Gunadarma</h3>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- bs-custom-file-input -->
+    <script src="/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/adminlte/dist/js/adminlte.min.js"></script>
+    <!-- Page specific script -->
+    <script>
+      $(function () {
+        bsCustomFileInput.init();
+      });
+    </script>
+    <script>
+      // Preview Photo
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            $("#preview").attr("src", e.target.result);
+            $("#preview").attr("width", "20%");
+            $("#preview").attr("height", "20%");
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $("#photo").change(function () {
+        readURL(this);
+      });
+
+      // Preview PDF
+      //   const input = document.getElementById("cv-file");
+      //   const preview = document.getElementById("pdf-preview");
+
+      //   input.addEventListener("change", () => {
+      //     const file = input.files[0];
+      //     const reader = new FileReader();
+
+      //     reader.addEventListener("load", () => {
+      //       preview.innerHTML = `
+      //   <embed src="${reader.result}" width="100%" height="500">
+      // `;
+      //     });
+
+      //     reader.readAsDataURL(file);
+      //   });
+    </script>
+  </body>
+</html>

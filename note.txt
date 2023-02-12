@@ -1,0 +1,7 @@
+Web Apps
+Aplikasi Pendaftaran Asisten dan Programmer Lab Psikologi UG
+
+Fitur:
+- Form Pendaftaran : Nama, Kelas, Pilihan Region, Upload File, dst.
+- Login Admin, Tabel Data Pendaftar, Export data.
+- Fitur Delete, Searching, Pagination.
