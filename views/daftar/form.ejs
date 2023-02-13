@@ -68,7 +68,7 @@
             <div class="form-group">
               <label>Region</label>
               <select class="form-control select2" style="width: 100%" name="region" required>
-                <option selected="selected">Pilih Region</option>
+                <option selected="selected" disabled>Pilih Region</option>
                 <option value="Depok">Depok</option>
                 <option value="Kalimalang">Kalimalang</option>
                 <option value="Cengkareng">Cengkareng</option>
@@ -76,36 +76,34 @@
             </div>
             <div class="form-group">
               <label for="photo">Upload Photo</label>
-              <span class="ml-3 text-dark font-italic">(Format: Foto_Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: Foto_Nama.pdf)</span>
               <input type="file" class="form-control" id="photo" name="photo" required />
               <br />
               <img id="preview" alt="" />
             </div>
             <div class="form-group">
               <label for="cv">Upload CV</label>
-              <span class="ml-3 text-dark font-italic">(Format: CV-Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: CV-Nama.pdf)</span>
               <input type="file" class="form-control" name="cv" id="cv-file" accept=".pdf" required />
-              <!-- <br />
-              <div id="pdf-preview"></div> -->
             </div>
             <div class="form-group">
               <label for="krs">Upload KRS</label>
-              <span class="ml-3 text-dark font-italic">(Format: KRS Semester ..._Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: KRS Semester ..._Nama.pdf)</span>
               <input type="file" class="form-control" name="krs" id="krs-file" accept=".pdf" required />
             </div>
             <div class="form-group">
               <label for="ktp">Upload KTP</label>
-              <span class="ml-3 text-dark font-italic">(Format: KTP Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: KTP Nama.pdf)</span>
               <input type="file" class="form-control" name="ktp" id="ktp-file" accept=".pdf" required />
             </div>
             <div class="form-group">
               <label for="ktm">Upload KTM</label>
-              <span class="ml-3 text-dark font-italic">(Format: KTM Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: KTM Nama.pdf)</span>
               <input type="file" class="form-control" name="ktm" id="ktm-file" accept=".pdf" required />
             </div>
             <div class="form-group">
               <label for="nilai">Upload Rangkuman Nilai</label>
-              <span class="ml-3 text-dark font-italic">(Format: RangkumanNilai_Nama)</span>
+              <span class="ml-3 text-dark font-italic">(Format: RangkumanNilai_Nama.pdf)</span>
               <input type="file" class="form-control" name="nilai" id="nilai-file" accept=".pdf" required />
             </div>
           </div>
@@ -162,23 +160,6 @@
       $("#photo").change(function () {
         readURL(this);
       });
-
-      // Preview PDF
-      //   const input = document.getElementById("cv-file");
-      //   const preview = document.getElementById("pdf-preview");
-
-      //   input.addEventListener("change", () => {
-      //     const file = input.files[0];
-      //     const reader = new FileReader();
-
-      //     reader.addEventListener("load", () => {
-      //       preview.innerHTML = `
-      //   <embed src="${reader.result}" width="100%" height="500">
-      // `;
-      //     });
-
-      //     reader.readAsDataURL(file);
-      //   });
     </script>
   </body>
 </html>
