@@ -4,5 +4,5 @@ dotenv.config();
 
 module.exports = {
   serviceName: process.env.SERVICE_NAME,
-  urlDb: process.env.MONGO_URL_DEV,
+  urlDb: process.env.MONGO_URL,
 };
