@@ -14,11 +14,11 @@ router.post("/", adminController.actionSignin);
 router.get("/logout", adminController.actionLogout);
 
 // Router Page
-router.get("/dashboard", adminController.viewDashboard);
-router.get("/reportCandidate", adminController.exportData);
-router.get("/candidate", adminController.viewCandidate);
-router.get("/candidate/detail/:id", adminController.viewDetailCandidate);
-router.get("/pdf", adminController.viewFile);
-router.delete("/candidate/delete", adminController.actionDelete);
+router.get("/dashboard", isLoginAdmin, adminController.viewDashboard);
+router.get("/reportCandidate", isLoginAdmin, adminController.exportData);
+router.get("/candidate", isLoginAdmin, adminController.viewCandidate);
+router.get("/candidate/detail/:id", isLoginAdmin, adminController.viewDetailCandidate);
+router.get("/pdf", isLoginAdmin, adminController.viewFile);
+router.delete("/candidate/delete", isLoginAdmin, adminController.actionDelete);
 
 module.exports = router;
